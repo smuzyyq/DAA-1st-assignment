@@ -1,9 +1,8 @@
 Algorithm, Time Taken (ns), Comparisons, Allocations, Max Recursion Depth
-QuickSort with size 0, 0, 0, 0, 0
-QuickSort with size 1, 0, 0, 0, 0
-QuickSort with size 10, 2, 22, 7, 3
-QuickSort with size 50, 8, 239, 34, 5
-QuickSort with size 100, 23, 614, 63, 6
-QuickSort with size 500, 92, 4576, 329, 6
-QuickSort with size 1000, 35, 10874, 671, 7
-QuickSort with size 2000, 52, 23621, 1344, 8
+DeterministicSelect with size 1, 0, 0, 0, 0
+DeterministicSelect with size 10, 9, 21, 35, 2
+DeterministicSelect with size 50, 3, 117, 129, 3
+DeterministicSelect with size 100, 1, 231, 200, 3
+DeterministicSelect with size 500, 4, 1455, 1190, 4
+DeterministicSelect with size 1000, 47, 3007, 2428, 5
+DeterministicSelect with size 2000, 15, 6033, 4529, 5
