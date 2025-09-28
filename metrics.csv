@@ -1,0 +1,9 @@
+Algorithm, Time Taken (ns), Comparisons, Allocations, Max Recursion Depth
+QuickSort with size 0, 0, 0, 0, 0
+QuickSort with size 1, 0, 0, 0, 0
+QuickSort with size 10, 2, 22, 7, 3
+QuickSort with size 50, 8, 239, 34, 5
+QuickSort with size 100, 23, 614, 63, 6
+QuickSort with size 500, 92, 4576, 329, 6
+QuickSort with size 1000, 35, 10874, 671, 7
+QuickSort with size 2000, 52, 23621, 1344, 8
