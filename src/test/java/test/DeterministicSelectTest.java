@@ -14,14 +14,7 @@ import java.util.Random;
 class DeterministicSelectTest {
     private static final String METRICS = "metrics.csv";
 
-    @BeforeAll
-    static void clearMetricsFile() {
-        try {
-            Files.deleteIfExists(Paths.get(METRICS));
-        } catch (IOException e) {
-            System.err.println("Error while trying to delete metrics file: " + e.getMessage());
-        }
-    }
+
 
     @ParameterizedTest
     @ValueSource(ints = {1, 10, 50, 100, 500, 1000, 2000})

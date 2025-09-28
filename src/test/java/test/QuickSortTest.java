@@ -15,15 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class QuickSortTest {
     private static final String METRICS = "metrics.csv";
 
-    @BeforeAll
-    static void clearMetricsFile() {
-        try {
-            boolean deleted = Files.deleteIfExists(Paths.get(METRICS));
-        } catch (IOException e) {
-            System.err.println("Error while trying to delete metrics file: " + e.getMessage());
-        }
-    }
-
 
     @ParameterizedTest
     @ValueSource(ints = {0, 1, 10, 50, 100, 500, 1000, 2000})

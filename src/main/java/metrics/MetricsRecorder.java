@@ -1,4 +1,5 @@
 package metrics;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,14 +20,16 @@ public class MetricsRecorder {
     }
     public void decreaseRecursionDepth() { currentRecursionDepth.decrementAndGet(); }
 
+    public int getComparisonCount() { return comparisonCounter.get(); }
+    public int getAllocationCount() { return allocationCounter.get(); }
+    public int getMaxRecursionDepth() { return maxRecursionDepth.get(); }
+
     public void reset() {
         comparisonCounter.set(0);
         allocationCounter.set(0);
         currentRecursionDepth.set(0);
         maxRecursionDepth.set(0);
     }
-
-    public int getComparisonCount() { return comparisonCounter.get(); }
 
     public void writeMetricsToCSV(long timeTaken, String algorithmName) throws IOException {
         File file = new File("metrics.csv");
@@ -39,7 +42,7 @@ public class MetricsRecorder {
                 printWriter.println("Algorithm, Time Taken (ns), Comparisons, Allocations, Max Recursion Depth");
             }
 
-            printWriter.printf("%s, %d, %d, %d, %d\n",
+            printWriter.printf("%s, %d, %d, %d, %d%n",
                     algorithmName,
                     timeTaken,
                     comparisonCounter.get(),
